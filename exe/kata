@@ -2,4 +2,14 @@
 
 require 'kata'
 
-puts 'hello'
+Kata.usage unless ARGV.any?
+
+ARGV.each do |a|
+  if a == 'start'
+    Kata.start
+  elsif a == 'stop'
+    Kata.stop
+  else
+   Kata.usage 
+  end
+end
